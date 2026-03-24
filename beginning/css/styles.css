@@ -61,3 +61,32 @@ header ul {
 nav li {
     margin: 0 1em;
 }
+nav li a {
+    padding: 20px 0;
+}
+.sub-menu {
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    padding: 10px 20px 10px 10px;
+    border-radius: 20px;
+    width: 140px;
+    margin-top: 10px;
+    gap: 1pc;
+    align-items: start;
+    /* display: none; */
+}
+.sub-menu a {
+    padding: 0;
+}
+nav li:hover > .submenu {
+    display: flex;
+}
+
+
+
+@media screen {
+
+    
+}
