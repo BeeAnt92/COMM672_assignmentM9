@@ -63,7 +63,7 @@ nav li {
 }
 nav li a {
     padding: 20px 0;
-}
+} 
 .sub-menu {
     flex-direction: column;
     position: absolute;
@@ -75,18 +75,76 @@ nav li a {
     margin-top: 10px;
     gap: 1pc;
     align-items: start;
-    /* display: none; */
+    display: none;
 }
 .sub-menu a {
     padding: 0;
 }
-nav li:hover > .submenu {
+nav li:hover > .sub-menu {
     display: flex;
 }
+.navToggler, .navTogglerMenu {
+    display: none;
+}
 
-
-
-@media screen {
-
-    
+@media (max-width: 767px) {
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        left: 0;
+        font-weight: bold;
+    }
+    header nav ul {
+        flex-direction: column;
+        background-color: #efefef;
+        align-items: center;
+        padding: 0;
+        border-top: 1px solid #fff;
+        width: 100%;
+    }
+    header nav li {
+        text-align: center;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        padding: 0;
+    }
+    nav li a {
+        align-items: center;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .container li:nth-child(5) {
+        background-color: #e6a563;
+    }
+    nav .button {
+        display: block;        
+        border-radius: 0;       
+        padding: 20px;
+        width: 100%;
+    }
+    .sub-menu {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        border-radius: 0;
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+        border-bottom: 10px solid #efefef;
+    }
+    .navTogglerMenu {
+        display: block;
+    }
+    .navTogglerMenu img {
+        width: 25px;
+    }
+    .menuClose, nav, .navToggler:checked ~ .navTogglerMenu .menuOpen {
+        display: none;
+    }
+    .navToggler:checked ~ nav, .navToggler:checked ~ .navTogglerMenu .menuClose {
+        display: block;
+    }
 }
