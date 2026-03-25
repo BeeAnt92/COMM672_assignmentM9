@@ -126,7 +126,6 @@ nav li:hover > .sub-menu {
     }
     .sub-menu {
         display: flex;
-        justify-content: space-between;
         position: relative;
         align-items: center;
         border-radius: 0;
@@ -142,7 +141,7 @@ nav li:hover > .sub-menu {
         width: 25px;
     }
     .menuClose, nav, .navToggler:checked ~ .navTogglerMenu .menuOpen {
-        display: none;
+        /* display: none; */
     }
     .navToggler:checked ~ nav, .navToggler:checked ~ .navTogglerMenu .menuClose {
         display: block;
